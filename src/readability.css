@@ -1,0 +1,248 @@
+/* Human readability pass for dense report and intel text. */
+
+.report-view,
+.full-intel-view {
+  color: #F8FAFC;
+  text-rendering: optimizeLegibility;
+}
+
+.report-view-inner,
+.full-intel-inner {
+  max-width: 1040px;
+}
+
+.report-section {
+  margin-bottom: 56px;
+}
+
+.section-intro,
+.full-intel-header p,
+.full-intel-inner.empty p {
+  max-width: 760px;
+  color: #CBD5E1;
+  font-size: 15px;
+  line-height: 1.75;
+  font-style: normal;
+}
+
+.report-section-title {
+  margin-bottom: 18px;
+  line-height: 1.22;
+}
+
+.narrative-card,
+.strategic-brief-card,
+.creative-brief-report-card,
+.intel-reader,
+.field-card,
+.island-field-card,
+.risk-card,
+.habitat-card,
+.brief-report-signal,
+.sequence-step {
+  background-color: rgba(15, 23, 42, 0.72);
+}
+
+.narrative-body,
+.strategic-brief-body,
+.sequence-step p,
+.habitat-row p,
+.brief-report-block p,
+.brief-report-list-block li,
+.brief-report-arc p,
+.brief-report-signal p,
+.risk-copy,
+.risk-mitigation p,
+.field-value,
+.field-object-value,
+.field-list li,
+.card-community,
+.card-list li,
+.saydo-text,
+.saydo-role-text,
+.momentum-text,
+.detail-list li,
+.stat-value,
+.brand-narrative,
+.brief-text,
+.task-text,
+.arc-desc {
+  color: #E5E7EB;
+  font-size: 14.5px;
+  line-height: 1.78;
+  opacity: 1;
+}
+
+.field-value,
+.field-object-value,
+.field-list li {
+  overflow-wrap: break-word;
+}
+
+.field-object {
+  display: grid;
+  gap: 12px;
+}
+
+.field-object-row {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.field-object-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.field-label,
+.field-object-key,
+.card-section-title,
+.section-heading,
+.habitat-row span,
+.brief-report-block span,
+.brief-report-list-block span,
+.brief-report-arc > span,
+.brief-report-signal span,
+.risk-mitigation span {
+  letter-spacing: 0.08em;
+}
+
+.island-card.expanded .card-body {
+  gap: 20px;
+}
+
+.card-section {
+  padding-bottom: 20px;
+}
+
+.card-name {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.card-status,
+.card-growth,
+.status-cell,
+.community-language {
+  color: #B6C2D3;
+}
+
+.summary-table {
+  font-size: 14px;
+}
+
+.summary-table td {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.intel-reader {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 36px 40px;
+}
+
+.intel-reader h2 {
+  max-width: 780px;
+  line-height: 1.15;
+}
+
+.intel-summary {
+  max-width: 760px;
+  color: #DCE7F5;
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.intel-markdown {
+  max-width: 780px;
+  color: #E5E7EB;
+}
+
+.intel-markdown h3,
+.intel-markdown h4 {
+  color: #F8FAFC;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.intel-markdown h3 {
+  margin: 32px 0 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.intel-markdown h3:first-child {
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.intel-markdown h4 {
+  margin: 24px 0 10px;
+  color: #BAE6FD;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.intel-markdown p,
+.intel-markdown li,
+.intel-markdown blockquote {
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+.intel-markdown p {
+  margin: 0 0 18px;
+}
+
+.intel-markdown ul {
+  display: grid;
+  gap: 9px;
+  margin: 0 0 22px;
+  padding-left: 22px;
+}
+
+.intel-markdown li::marker {
+  color: var(--cyan-accent);
+}
+
+.intel-markdown strong {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.intel-markdown blockquote {
+  margin: 22px 0;
+  padding: 14px 18px;
+  color: #F8FAFC;
+  background: rgba(56, 189, 248, 0.08);
+  border-left: 3px solid var(--cyan-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+@media (max-width: 760px) {
+  .report-view-inner,
+  .full-intel-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .intel-reader {
+    padding: 24px 20px;
+  }
+
+  .intel-markdown p,
+  .intel-markdown li,
+  .intel-markdown blockquote {
+    font-size: 15px;
+    line-height: 1.78;
+  }
+
+  .field-grid,
+  .field-grid.compact {
+    grid-template-columns: 1fr;
+  }
+}
