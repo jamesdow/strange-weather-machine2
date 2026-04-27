@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import './deliverable.css';
+import './readability.css';
 import Header from './components/Header.jsx';
 import IslandMap from './components/IslandMap.jsx';
 import ReportView from './components/ReportView.jsx';
