@@ -1,0 +1,213 @@
+/* Full deliverable modules layered on top of the existing mapper styles. */
+
+.strategic-brief-card {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.11), rgba(56, 189, 248, 0.07));
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.strategic-brief-headline {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.strategic-brief-body {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  opacity: 0.92;
+  margin-bottom: 18px;
+}
+
+.strategic-sequence,
+.habitat-grid,
+.brief-report-signal-grid,
+.risk-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.strategic-sequence,
+.brief-report-signal-grid,
+.risk-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.habitat-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.sequence-step,
+.habitat-card,
+.brief-report-signal,
+.risk-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+.sequence-num {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 107, 157, 0.18);
+  color: #FF6B9D;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.sequence-step p,
+.habitat-row p,
+.brief-report-block p,
+.brief-report-list-block li,
+.brief-report-arc p,
+.brief-report-signal p,
+.risk-copy,
+.risk-mitigation p {
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.91;
+}
+
+.habitat-name,
+.risk-territory {
+  color: var(--cyan-accent);
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.risk-territory {
+  color: #FAAD14;
+}
+
+.habitat-row,
+.brief-report-block,
+.brief-report-list-block,
+.brief-report-arc {
+  margin-bottom: 16px;
+}
+
+.habitat-row span,
+.brief-report-block span,
+.brief-report-list-block span,
+.brief-report-arc > span,
+.brief-report-signal span,
+.risk-mitigation span {
+  display: block;
+  color: #FF6B9D;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.creative-brief-report-list {
+  display: grid;
+  gap: 18px;
+}
+
+.creative-brief-report-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.brief-report-kicker {
+  color: #FF6B9D;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.creative-brief-report-card h3 {
+  color: var(--text-primary);
+  font-size: 23px;
+  letter-spacing: -0.4px;
+  margin-bottom: 18px;
+}
+
+.brief-report-block.task p {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.brief-report-signal.public {
+  border-color: rgba(56, 189, 248, 0.2);
+}
+
+.brief-report-signal.private {
+  border-color: rgba(167, 139, 250, 0.22);
+}
+
+.brief-report-signal.gap,
+.brief-report-list-block.landmines {
+  border-color: rgba(255, 107, 157, 0.24);
+}
+
+.brief-report-list-block ul {
+  padding-left: 18px;
+}
+
+.brief-report-list-block li {
+  margin-bottom: 6px;
+}
+
+.brief-report-list-block.landmines,
+.risk-card {
+  background: rgba(255, 107, 157, 0.06);
+  border: 1px solid rgba(255, 107, 157, 0.18);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.risk-card {
+  background: rgba(250, 173, 20, 0.06);
+  border-color: rgba(250, 173, 20, 0.2);
+}
+
+.risk-copy {
+  margin-bottom: 14px;
+}
+
+@media (max-width: 900px) {
+  .strategic-sequence,
+  .brief-report-signal-grid,
+  .risk-grid,
+  .habitat-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .strategic-brief-card,
+  .creative-brief-report-card,
+  .habitat-card,
+  .risk-card {
+    padding: 16px;
+  }
+
+  .strategic-brief-headline {
+    font-size: 21px;
+  }
+
+  .creative-brief-report-card h3 {
+    font-size: 19px;
+  }
+}
