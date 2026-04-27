@@ -242,6 +242,141 @@ const genericEnhancements = {
   },
 };
 
+const enhancedIslands = primarkBase.islands.map(island => ({
+  ...island,
+  ...(genericEnhancements[island.id] || {}),
+  ...(islandEnhancements[island.id] || {}),
+}));
+
+function renderList(items = []) {
+  return items.map(item => `- ${item}`).join("\n");
+}
+
+function renderStage2TerritoryMap(islands) {
+  return `# Stage 2 Agent: Territory Map Compiler
+
+## Role
+This output translates the Stage 2 map payload into a ranked cultural territory readout.
+
+## Ranked Cultural Islands
+
+${islands.map((island, index) => `### ${index + 1}. ${island.name}
+- **Tier:** ${island.tier}
+- **Score:** ${island.score}
+- **Novelty distance:** ${island.noveltyDistance || "Not specified"}
+- **Competitive space:** ${island.competitiveSpace || "Not specified"}
+- **Status:** ${island.status || "Not specified"}
+- **Growth:** ${island.growth || "Not specified"}
+- **Window:** ${island.window || "Not specified"}
+- **Emotional journey:** ${island.emotionalJourney || island.brandNarrative || "Not specified"}
+- **Gap statement:** ${island.gapStatement || "Not specified"}`).join("\n\n")}
+
+## Read
+The immediate opportunity cluster is concentrated around value with dignity: making the store trip feel winnable, making transitional youth style feel seen, and making adaptive clothing feel ordinary and affordable.`;
+}
+
+function renderStage2Metrics(islands) {
+  return `# Stage 2 Agent: Strategic Metrics
+
+## Role
+This output captures the scoring, prioritisation, and risk logic behind the Stage 2 territory map.
+
+## Scorecard
+
+${islands.map(island => `### ${island.name}
+- **Total score:** ${island.score}
+- **Tier:** ${island.tier}
+- **Status:** ${island.status || "Not specified"}
+${island.scoring ? Object.entries(island.scoring).map(([key, value]) => `- **${key.replace(/([a-z0-9])([A-Z])/g, "$1 $2")}:** ${value}`).join("\n") : "- **Scoring detail:** Not specified"}
+${island.sayDo ? `- **Say / Do gap:** ${island.sayDo.gap}/100` : "- **Say / Do gap:** Not specified"}`).join("\n\n")}
+
+## Risk Flags
+
+${riskFlags.map(risk => `### ${risk.territory}
+- **Risk:** ${risk.risk}
+- **Mitigation:** ${risk.mitigation}`).join("\n\n")}`;
+}
+
+function renderStage2MediaHabitat(islands) {
+  return `# Stage 2 Agent: Media Habitat and Community Activation
+
+## Role
+This output makes each island usable by mapping where it should live, who can carry it, and what formats fit the behaviour.
+
+${islands.filter(island => island.mediaHabitat || island.contentStrategy || island.community).map(island => `### ${island.name}
+${island.community ? `- **Community:** ${island.community.name || "Not specified"}${island.community.members ? ` — ${island.community.members}` : ""}` : "- **Community:** Not specified"}
+${island.mediaHabitat ? `- **Primary platform:** ${island.mediaHabitat.primaryPlatform}
+- **Format family:** ${island.mediaHabitat.formatFamily}
+- **Creator landscape:** ${island.mediaHabitat.creatorLandscape}
+- **Activation pattern:** ${island.mediaHabitat.activationPattern}` : "- **Media habitat:** Not specified"}
+${island.contentStrategy?.formats ? `- **Formats:** ${island.contentStrategy.formats.join(", ")}` : ""}
+${island.contentStrategy?.platforms ? `- **Platforms:** ${island.contentStrategy.platforms.join(", ")}` : ""}
+${island.contentStrategy?.pathToTrust ? `- **Path to trust:** ${island.contentStrategy.pathToTrust}` : ""}`).join("\n\n")}`;
+}
+
+function renderStage2CreativeBriefs(islands) {
+  return `# Stage 2 Agent: Creative Brief Extractor
+
+## Role
+This output turns the strongest Stage 2 islands into early creative briefing material.
+
+${islands.filter(island => island.creativeBrief).slice(0, 3).map(island => {
+    const brief = island.creativeBrief;
+    return `### ${island.name}
+- **The territory:** ${brief.theTerritory || "Not specified"}
+- **The human:** ${brief.theHuman || "Not specified"}
+- **The enemy:** ${brief.theEnemy || "Not specified"}
+- **The task:** ${brief.theTask || "Not specified"}
+- **The emotion:** ${brief.theEmotion || "Not specified"}
+- **The incongruence:** ${brief.theIncongruence || "Not specified"}
+- **Earned reason:** ${brief.earnedReason || "Not specified"}
+
+#### Emotional Arc
+- **Arrest:** ${brief.emotionalArc?.arrest || "Not specified"}
+- **Hold:** ${brief.emotionalArc?.middle || "Not specified"}
+- **Resolve:** ${brief.emotionalArc?.resolve || "Not specified"}
+
+#### Proof
+${renderList(brief.proof)}
+
+#### What Would Kill This
+${renderList(brief.landmines)}
+
+> ${brief.oneSentence || island.brandNarrative || ""}`;
+  }).join("\n\n")}`;
+}
+
+const stage2Intel = [
+  {
+    id: "stage2-agent-territory-map",
+    stage: "Stage 2",
+    agent: "Territory Map Compiler",
+    title: "Territory Map Compiler",
+    body: renderStage2TerritoryMap(enhancedIslands),
+  },
+  {
+    id: "stage2-agent-strategic-metrics",
+    stage: "Stage 2",
+    agent: "Strategic Metrics",
+    title: "Strategic Metrics",
+    body: renderStage2Metrics(enhancedIslands),
+  },
+  {
+    id: "stage2-agent-media-habitat",
+    stage: "Stage 2",
+    agent: "Media Habitat",
+    title: "Media Habitat and Community Activation",
+    body: renderStage2MediaHabitat(enhancedIslands),
+  },
+  {
+    id: "stage2-agent-creative-briefs",
+    stage: "Stage 2",
+    agent: "Creative Brief Extractor",
+    title: "Creative Brief Extractor",
+    body: renderStage2CreativeBriefs(enhancedIslands),
+  },
+];
+
 const fullIntel = [
   {
     id: "os-run-synthesis",
@@ -251,6 +386,7 @@ const fullIntel = [
     date: "2026-04-26",
     body: osRun,
   },
+  ...stage2Intel,
   {
     id: "stage1-agent-1-brand-archaeology",
     stage: "Stage 1",
@@ -309,11 +445,7 @@ const primarkDeliverable = {
   riskFlags,
   fullIntel,
   sources: mergeSources(primarkBase.sources),
-  islands: primarkBase.islands.map(island => ({
-    ...island,
-    ...(genericEnhancements[island.id] || {}),
-    ...(islandEnhancements[island.id] || {}),
-  })),
+  islands: enhancedIslands,
 };
 
 export default primarkDeliverable;
