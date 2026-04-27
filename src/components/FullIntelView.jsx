@@ -19,6 +19,111 @@ function labelForIntel(item, index) {
   return item.title || item.name || item.agent || item.id || `Intel ${index + 1}`;
 }
 
+function InlineText({ text }) {
+  const parts = String(text).split(/(\*\*[^*]+\*\*)/g);
+
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+    return <React.Fragment key={index}>{part}</React.Fragment>;
+  });
+}
+
+function MarkdownIntelBody({ text }) {
+  const lines = String(text || '').split(/\r?\n/);
+  const blocks = [];
+  let paragraph = [];
+  let list = [];
+
+  function flushParagraph() {
+    if (paragraph.length > 0) {
+      blocks.push({ type: 'paragraph', text: paragraph.join(' ') });
+      paragraph = [];
+    }
+  }
+
+  function flushList() {
+    if (list.length > 0) {
+      blocks.push({ type: 'list', items: list });
+      list = [];
+    }
+  }
+
+  lines.forEach(rawLine => {
+    const line = rawLine.trim();
+
+    if (!line) {
+      flushParagraph();
+      flushList();
+      return;
+    }
+
+    const heading = line.match(/^(#{1,4})\s+(.+)$/);
+    if (heading) {
+      flushParagraph();
+      flushList();
+      blocks.push({
+        type: 'heading',
+        level: Math.min(heading[1].length, 4),
+        text: heading[2],
+      });
+      return;
+    }
+
+    const bullet = line.match(/^[-*]\s+(.+)$/);
+    const numbered = line.match(/^\d+[.)]\s+(.+)$/);
+    if (bullet || numbered) {
+      flushParagraph();
+      list.push((bullet || numbered)[1]);
+      return;
+    }
+
+    if (line.startsWith('>')) {
+      flushParagraph();
+      flushList();
+      blocks.push({ type: 'quote', text: line.replace(/^>\s?/, '') });
+      return;
+    }
+
+    paragraph.push(line);
+  });
+
+  flushParagraph();
+  flushList();
+
+  if (blocks.length === 0) {
+    return <p className="intel-paragraph">No content available.</p>;
+  }
+
+  return (
+    <div className="intel-markdown">
+      {blocks.map((block, index) => {
+        if (block.type === 'heading') {
+          const Tag = block.level <= 2 ? 'h3' : 'h4';
+          return <Tag key={index}><InlineText text={block.text} /></Tag>;
+        }
+
+        if (block.type === 'list') {
+          return (
+            <ul key={index}>
+              {block.items.map((item, itemIndex) => (
+                <li key={itemIndex}><InlineText text={item} /></li>
+              ))}
+            </ul>
+          );
+        }
+
+        if (block.type === 'quote') {
+          return <blockquote key={index}><InlineText text={block.text} /></blockquote>;
+        }
+
+        return <p key={index}><InlineText text={block.text} /></p>;
+      })}
+    </div>
+  );
+}
+
 export default function FullIntelView({ brandData }) {
   const intelItems = useMemo(
     () => normaliseIntel(brandData.fullIntel || brandData.agentOutputs || brandData.stageOutputs),
@@ -86,7 +191,7 @@ export default function FullIntelView({ brandData }) {
           </div>
           <h2>{labelForIntel(activeItem, 0)}</h2>
           {activeItem.summary && <p className="intel-summary">{activeItem.summary}</p>}
-          <pre className="intel-body">{activeItem.body || activeItem.content || activeItem.output || ''}</pre>
+          <MarkdownIntelBody text={activeItem.body || activeItem.content || activeItem.output || ''} />
         </article>
       </div>
     </div>
