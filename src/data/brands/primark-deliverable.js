@@ -1,11 +1,4 @@
 import primarkBase from './primark.js';
-import osRun from '../intel/primark/2026-04-26-os-run.md?raw';
-import brandArchaeology from '../intel/primark/stage1-agent-1-brand-archaeology.md?raw';
-import categoryEvolution from '../intel/primark/stage1-agent-3-category-evolution.md?raw';
-import audienceIntelligence from '../intel/primark/stage1-agent-4-audience-intelligence.md?raw';
-import competitiveLandscape from '../intel/primark/stage1-agent-5-competitive-landscape.md?raw';
-import culturalCurrents from '../intel/primark/stage1-agent-6-cultural-currents.md?raw';
-import deepCulture from '../intel/primark/stage1-agent-7-deep-culture.md?raw';
 import v2Stage1BrandArchaeology from '../intel/primark/v2/stage1-agent-1-brand-archaeology.md?raw';
 import v2Stage1ProductRetail from '../intel/primark/v2/stage1-agent-2-product-retail-intelligence.md?raw';
 import v2Stage1CategoryEvolution from '../intel/primark/v2/stage1-agent-3-category-evolution.md?raw';
@@ -525,56 +518,6 @@ const fullIntel = [
     agent: "Agent 10",
     title: "Platform Intelligence",
     body: v2Stage1PlatformIntelligence,
-  },
-  {
-    id: "os-run-synthesis",
-    stage: "Legacy Run",
-    agent: "OS Synthesis",
-    title: "Legacy OS Run Synthesis",
-    date: "2026-04-26",
-    body: osRun,
-  },
-  {
-    id: "stage1-agent-1-brand-archaeology",
-    stage: "Legacy Stage 1",
-    agent: "Agent 1",
-    title: "Legacy Brand Archaeology",
-    body: brandArchaeology,
-  },
-  {
-    id: "stage1-agent-3-category-evolution",
-    stage: "Legacy Stage 1",
-    agent: "Agent 3",
-    title: "Legacy Category Evolution",
-    body: categoryEvolution,
-  },
-  {
-    id: "stage1-agent-4-audience-intelligence",
-    stage: "Legacy Stage 1",
-    agent: "Agent 4",
-    title: "Legacy Audience Intelligence",
-    body: audienceIntelligence,
-  },
-  {
-    id: "stage1-agent-5-competitive-landscape",
-    stage: "Legacy Stage 1",
-    agent: "Agent 5",
-    title: "Legacy Competitive Landscape",
-    body: competitiveLandscape,
-  },
-  {
-    id: "stage1-agent-6-cultural-currents",
-    stage: "Legacy Stage 1",
-    agent: "Agent 6",
-    title: "Legacy Cultural Currents",
-    body: culturalCurrents,
-  },
-  {
-    id: "stage1-agent-7-deep-culture",
-    stage: "Legacy Stage 1",
-    agent: "Agent 7",
-    title: "Legacy Deep Culture",
-    body: deepCulture,
   },
 ];
 
