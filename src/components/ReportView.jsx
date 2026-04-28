@@ -1,5 +1,6 @@
 import React from 'react';
 import IslandCard from './IslandCard.jsx';
+import MayaGauge from './MayaGauge.jsx';
 import { islandColor, COMPETITIVE_COLORS, NOVELTY_COLORS } from '../utils/colors.js';
 import { downloadReportPdf } from '../utils/downloadPdf.js';
 
@@ -358,7 +359,7 @@ function WeatherMachineSection({ weatherMachine, islands }) {
                 <th>Rank</th>
                 <th>Island</th>
                 <th>Emotion</th>
-                <th>Incongruence</th>
+                <th>MAYA Fit</th>
                 <th>Why It Passes</th>
               </tr>
             </thead>
@@ -370,7 +371,7 @@ function WeatherMachineSection({ weatherMachine, islands }) {
                   <td>{island.primaryEmotion}</td>
                   <td>
                     {island.maya?.incongruence != null && (
-                      <span className="table-score maya-score">{island.maya.incongruence}/10</span>
+                      <MayaGauge value={island.maya.incongruence} compact />
                     )}
                   </td>
                   <td className="status-cell">{island.maya?.whyItPasses}</td>

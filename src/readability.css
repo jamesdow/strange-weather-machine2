@@ -150,6 +150,107 @@
   color: #FFB3CE;
 }
 
+.maya-gauge {
+  width: min(100%, 260px);
+  margin: 2px 0 14px;
+}
+
+.maya-gauge svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.maya-gauge.compact {
+  width: 118px;
+  margin: 0;
+}
+
+.maya-arc {
+  fill: none;
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+
+.maya-arc.low {
+  stroke: rgba(168, 155, 245, 0.72);
+}
+
+.maya-arc.sweet {
+  stroke: rgba(110, 231, 183, 0.92);
+}
+
+.maya-arc.high {
+  stroke: rgba(255, 107, 157, 0.86);
+}
+
+.maya-baseline {
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.maya-needle {
+  stroke: #F8FAFC;
+  stroke-width: 3;
+  stroke-linecap: round;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.45));
+}
+
+.maya-pin {
+  fill: #F8FAFC;
+  stroke: rgba(15, 23, 42, 0.9);
+  stroke-width: 2;
+}
+
+.maya-axis-label {
+  fill: #B6C2D3;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.maya-gauge-readout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -6px;
+}
+
+.maya-gauge-readout span {
+  color: #F8FAFC;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.maya-gauge-readout strong {
+  display: inline-flex;
+  min-width: 28px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #D1FAE5;
+  font-size: 12px;
+}
+
+.maya-gauge.compact .maya-gauge-readout {
+  justify-content: center;
+  margin-top: -16px;
+}
+
+.maya-gauge.compact .maya-gauge-readout span {
+  display: none;
+}
+
+.maya-gauge.compact .maya-gauge-readout strong {
+  height: 20px;
+  min-width: 24px;
+  font-size: 11px;
+}
+
 .directive-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

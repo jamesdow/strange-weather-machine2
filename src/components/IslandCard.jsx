@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MayaGauge from './MayaGauge.jsx';
 import { islandColor, COMPETITIVE_COLORS, NOVELTY_COLORS } from '../utils/colors.js';
 
 // ─── Emotion badge ────────────────────────────────────────────────────────────
@@ -232,10 +233,7 @@ export default function IslandCard({ island, allSources }) {
           {island.maya && (
             <div className="card-section">
               <div className="card-section-title">MAYA Fit</div>
-              <div className="weather-mini-score">
-                <span>Incongruence</span>
-                <strong>{island.maya.incongruence}/10</strong>
-              </div>
+              <MayaGauge value={island.maya.incongruence} />
               {island.maya.whyItPasses && <p className="momentum-text">{island.maya.whyItPasses}</p>}
             </div>
           )}
