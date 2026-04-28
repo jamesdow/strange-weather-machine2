@@ -7,6 +7,25 @@ import competitiveLandscape from '../intel/primark/stage1-agent-5-competitive-la
 import culturalCurrents from '../intel/primark/stage1-agent-6-cultural-currents.md?raw';
 import deepCulture from '../intel/primark/stage1-agent-7-deep-culture.md?raw';
 
+const v2Stage2Map = "# V2 Stage 2 Cultural Territory Map\n\n**Primark V2 orchestrator output:** stage2-cultural-territory-map.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:P7KQ2], [VERIFY:Q7M2K], [VERIFY:Q7M2K], [VERIFY:K7Q4M]\n\n# Primark V2 Stage 2 Cultural Territory Map Run date: 2026-04-27 Agent: Primark V2 Stage 2 Synthesis Agent Protocol: Strange Weather OS Stage 2 Synthesis Evidence rule: this synthesis uses only the seven files specified in the brief. No web search was used. ## 1. The Strategic Narrative Platform ### The POV Primark should stop defending cheapness as a price point and start proving it as a life skill: the brand for af...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage2-cultural-territory-map.md";
+const v2Stage1Landscape = "# V2 Stage 1 Foundational Landscape\n\n**Primark V2 orchestrator output:** stage1-foundational-landscape.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:P7KQ2], [VERIFY:Q7M2K], [VERIFY:Q7M2K], [VERIFY:K7Q4M]\n\n# Primark V2 Stage 1 Foundational Landscape Run date: 2026-04-27 Synthesis agent: Primark V2 Stage 1 Synthesis Agent Protocol: Strange Weather OS Orchestrator, synthesis contradiction-log requirement observed ## Brand Primark is a democratic value-fashion giant built on the promise that everyone deserves to look and feel good without paying more, but the brand is no longer just defending cheapness; it is trying to ma...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-foundational-landscape.md";
+const v2Stage2Communities = "# Community Discovery\n\n**Primark V2 orchestrator output:** stage2-agent-1-communities.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:P2C7M]\n\n# Primark V2 Stage 2 Agent 2.1 — Community Discovery Run date: 2026-04-27 Agent: 2.1 Community Discovery Brand: Primark Client folder: `/Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2` Protocol: Strange Weather OS Stage 2, Agent 2.1 ## Frame Primark does not have one obvious digital hearth. The strongest communities are not \"Primark fans\"; they are people solving wardrobe, family, body, ...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage2-agent-1-communities.md";
+const v2Stage2Creators = "# Creator Intelligence\n\n**Primark V2 orchestrator output:** stage2-agent-2-creators.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:P2C7M]\n\n# Primark V2 Stage 2 Agent 2.2 - Creator & Authority Intelligence Run date: 2026-04-27 Agent: Stage 2 Agent 2.2 - Creator Intelligence Brand: Primark Protocol: Strange Weather OS Orchestrator, evidence integrity protocol observed ## Fault Lines Carried From Stage 1 Cheapness vs clever value; store joy vs store ordeal; fashion credibility vs basics trust; sustainability proof vs volume suspicion; public intention vs p...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage2-agent-2-creators.md";
+const v2Stage2Texture = "# Cultural Texture\n\n**Primark V2 orchestrator output:** stage2-agent-3-texture.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:T3X9P]\n\n# Primark V2 Stage 2 Agent 2.3 - Cultural Texture Run date: 2026-04-27 Agent: Stage 2 Agent 2.3 - Cultural Texture / The Texture Hunter Brand: Primark Protocol: Strange Weather OS, Evidence Integrity Protocol observed with raw content blocks. Note: non-Reddit verbatim excerpts are capped for copyright compliance. ## Working Coordinates Using provisional community coordinates supplied from Stage 1 while Agent 2.1 may ...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage2-agent-3-texture.md";
+const v2Stage2AdjacentWorlds = "# Adjacent Worlds\n\n**Primark V2 orchestrator output:** stage2-agent-4-adjacent-worlds.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:Q4AW7]\n\n# Primark V2 Stage 2 Agent 2.4 - Adjacent Worlds Run date: 2026-04-27 Agent: 2.4 Adjacent Worlds Brand: Primark Protocol: Strange Weather OS Stage 2 ## Operating Frame Primark's core action is not simply \"buying cheap clothes.\" The repeated physical ritual is: see a need or a social possibility; browse digitally or socially; go to a store with uncertain stock; scan a large field of options; judge fabric, fit, price a...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage2-agent-4-adjacent-worlds.md";
+const v2Stage2CharacterAudit = "# Community Character Audit\n\n**Primark V2 orchestrator output:** stage2-agent-5-character-audit.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:P5C2K]\n\n# Primark V2 Stage 2 Agent 2.5: Community Character Audit Run date: 2026-04-27 Agent: Stage 2 Agent 2.5 Community Character, The Resident Observer Brand: Primark Input: Stage 1 Foundational Landscape plus ten provisional candidate islands Output file: `stage2-agent-5-character-audit.md` ## Method Note This audit tests whether the ten provisional islands from Stage 1 behave like coherent cultural realities rather than...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage2-agent-5-character-audit.md";
+const v2Stage2Metrics = "# Strategic Metrics\n\n**Primark V2 orchestrator output:** stage2-agent-6-metrics.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:M6P4Q]\n\n# Primark V2 Stage 2 Agent 2.6: Strategic Metrics Brand: Primark Agent: Stage 2 Agent 2.6 - Strategic Metrics Run date: 2026-04-27 Protocol: Strange Weather OS - Stage 2 Strategic Metrics ## Method Note Direct island-level market sizing is not publicly available for most of these candidate territories. I therefore used an Addressable Conversation Proxy (ACP) and Heat Ratio. Formula used: - ACP = the strongest publicl...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage2-agent-6-metrics.md";
+const v2Stage1BrandArchaeology = "# Brand Archaeology\n\n**Primark V2 orchestrator output:** stage1-agent-1-brand-archaeology.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:P7KQ2]\n\n# Primark V2 Stage 1 Agent 1 - Brand Archaeology Agent: Stage 1 Agent 1 - Brand Archaeology Brand: Primark Product focus: Summer Campaign - summer fashion, swimwear, holiday essentials Destination constraint: this file only Run date: 2026-04-27 ## Core Truth Primark is a store-led value fashion machine trying to make cheapness feel stylish, responsible and inclusive without surrendering the volume logic that makes it...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-1-brand-archaeology.md";
+const v2Stage1ProductRetail = "# Product & Retail Intelligence\n\n**Primark V2 orchestrator output:** stage1-agent-2-product-retail-intelligence.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:Q7M2K], [VERIFY:Q7M2K]\n\n# Primark V2 Stage 1 Agent 2: Product & Retail Intelligence Brand: Primark Agent: 2 - Product & Retail Intelligence Date: 2026-04-27 Verification code: [VERIFY:Q7M2K] ## Product Architecture Primark's product architecture is not built around a narrow hero SKU. It is built around breadth, family coverage, licensed drops, essentials, low price anchors, and frequent seasonal refresh. The clearest live product signal is ...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-2-product-retail-intelligence.md";
+const v2Stage1CategoryEvolution = "# Category Evolution\n\n**Primark V2 orchestrator output:** stage1-agent-3-category-evolution.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:Q7M2K]\n\n# Primark V2 Stage 1 Agent 3 - Category Evolution ## Category at a Glance The category is best defined as the overlap of four systems: apparel retail, high-street mass fashion, value/discount retail, and online fast fashion. The evidence does not support a single universal market-size figure for \"value fast fashion / high street retail\"; most sources size either apparel overall, online fashion, or the fast-fashion mo...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-3-category-evolution.md";
+const v2Stage1AudienceIntelligence = "# Audience Intelligence\n\n**Primark V2 orchestrator output:** stage1-agent-4-audience-intelligence.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:K7Q4M]\n\n# Primark V2 Stage 1 - Agent 4: Audience Intelligence Brand: Primark Category: Value Fast Fashion / High Street Retail Audience: Mass market, Gen Z and Millennials, budget-conscious shoppers Markets: UK and Europe Agent: 4 - Audience Intelligence Date: 2026-04-27 Verification status: Live research used where accessible. Social platform evidence was uneven; blanks are logged. ## Executive Read The audience is not one ...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-4-audience-intelligence.md";
+const v2Stage1CompetitiveLandscape = "# Competitive Landscape\n\n**Primark V2 orchestrator output:** stage1-agent-5-competitive-landscape.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:K7Q4M]\n\n# Primark V2 Stage 1 Agent 5: Competitive Landscape Brand: Primark Category: Value Fast Fashion / High Street Retail Markets: UK and Europe Run date: 2026-04-27 Agent: Stage 1 Agent 5 - Competitive Landscape ## Evidence Note Live research was available and used. I fetched official company pages, careers pages, customer review pages, and recent trade/news coverage. The orchestrator asks for raw content blocks of at le...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-5-competitive-landscape.md";
+const v2Stage1CulturalCurrents = "# Cultural Currents\n\n**Primark V2 orchestrator output:** stage1-agent-6-cultural-currents.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:K7M2Q]\n\n# Primark V2 Stage 1 Agent 6: Cultural Currents Brand: Primark Category: Value Fast Fashion / High Street Retail Markets: UK and Europe Agent: Stage 1 Agent 6 - Cultural Currents Date: 2026-04-27 ## Cultural Forces Inside the Category ### 1. Value Shame Is Becoming Value Calculation Description: The cultural tension around value fashion is shifting from simple embarrassment about cheap clothes to a sharper calculatio...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-6-cultural-currents.md";
+const v2Stage1DeepCulture = "# Deep Culture\n\n**Primark V2 orchestrator output:** stage1-agent-7-deep-culture.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:P7KQ2]\n\n# Primark V2 Stage 1 Agent 7 - Deep Culture Brand: Primark Category: Value Fast Fashion / High Street Retail Markets: UK and Europe Agent: 7 - Deep Culture Date: 2026-04-27 ## Meme Culture and Vernacular Humour ### Pattern 1: \"Primark got expensive or I got poor\" People mock the collapse of Primark's old bargain-store promise: the joke is not simply that Primark is expensive, but that a cultural safety valve has stop...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-7-deep-culture.md";
+const v2Stage1SignalReading = "# Signal Reading\n\n**Primark V2 orchestrator output:** stage1-agent-8-signal-reading.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:K8P4Q]\n\n# Primark V2 Stage 1 Agent 8 — Signal Reading Brand: Primark Category: Value Fast Fashion / High Street Retail Markets: UK and Europe Date run: 2026-04-27 Agent: 8, Signal Reading Evidence note: raw content blocks are included in a copyright-safe form: exact page titles plus short verbatim excerpts from fetched pages/search-result pages, followed by interpretation. Claims without adequate fetched evidence are marked ...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-8-signal-reading.md";
+const v2Stage1EmotionalLandscape = "# Emotional Landscape\n\n**Primark V2 orchestrator output:** stage1-agent-9-emotional-landscape.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:K9Q4M]\n\n# Primark V2 Stage 1 Agent 9 - Emotional Landscape Brand: Primark Category: Value Fast Fashion / High Street Retail Markets: UK and Europe Agent: 9 - Emotional Landscape Date: 2026-04-27 ## Category Emotional Map - What Brands Activate ### 1. Primark - \"Shockingly Chic\" Primary emotion activated: Surprise. Secondary: Joy and pride. Valence/arousal: high-arousal positive, because the campaign is built around the \"doub...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-9-emotional-landscape.md";
+const v2Stage1PlatformIntelligence = "# Platform Intelligence\n\n**Primark V2 orchestrator output:** stage1-agent-10-platform-intelligence.md\n\n**Status:** Ran in the full 2026-04-27 Primark V2 process.\n\n**Verification:** [VERIFY:K7M2Q]\n\n# Primark V2 Stage 1 Agent 10 — Platform Intelligence Brand: Primark Category: Value Fast Fashion / High Street Retail Markets: UK and Europe Date run: 27 April 2026 Agent: 10 — Platform Intelligence ## Platform Priority ### Tier 1 **TikTok** is Tier 1 because Primark-related content has visible scale and category-native mechanics: #primark is reported at 349.5k posts and 7.7bn views, with #primarkhaul at 2.5bn views...\n\nFull raw output is stored locally at /Users/sebastian/Documents/Claude/Projects/Strange Weather/clients/primark/v2/stage1-agent-10-platform-intelligence.md";
+
 const strategicBrief = {
   headline: "Make value feel easier to defend.",
   recommendation: "Sail first to the territories where Primark can turn low price into dignity: protect the store hunt, own the in-between youth gap, and make adaptive everyday clothing a mainstream proof point.",
@@ -248,185 +267,185 @@ const enhancedIslands = primarkBase.islands.map(island => ({
   ...(islandEnhancements[island.id] || {}),
 }));
 
-function renderList(items = []) {
-  return items.map(item => `- ${item}`).join("\n");
-}
-
-function renderStage2TerritoryMap(islands) {
-  return `# Stage 2 Agent: Territory Map Compiler
-
-## Role
-This output translates the Stage 2 map payload into a ranked cultural territory readout.
-
-## Ranked Cultural Islands
-
-${islands.map((island, index) => `### ${index + 1}. ${island.name}
-- **Tier:** ${island.tier}
-- **Score:** ${island.score}
-- **Novelty distance:** ${island.noveltyDistance || "Not specified"}
-- **Competitive space:** ${island.competitiveSpace || "Not specified"}
-- **Status:** ${island.status || "Not specified"}
-- **Growth:** ${island.growth || "Not specified"}
-- **Window:** ${island.window || "Not specified"}
-- **Emotional journey:** ${island.emotionalJourney || island.brandNarrative || "Not specified"}
-- **Gap statement:** ${island.gapStatement || "Not specified"}`).join("\n\n")}
-
-## Read
-The immediate opportunity cluster is concentrated around value with dignity: making the store trip feel winnable, making transitional youth style feel seen, and making adaptive clothing feel ordinary and affordable.`;
-}
-
-function renderStage2Metrics(islands) {
-  return `# Stage 2 Agent: Strategic Metrics
-
-## Role
-This output captures the scoring, prioritisation, and risk logic behind the Stage 2 territory map.
-
-## Scorecard
-
-${islands.map(island => `### ${island.name}
-- **Total score:** ${island.score}
-- **Tier:** ${island.tier}
-- **Status:** ${island.status || "Not specified"}
-${island.scoring ? Object.entries(island.scoring).map(([key, value]) => `- **${key.replace(/([a-z0-9])([A-Z])/g, "$1 $2")}:** ${value}`).join("\n") : "- **Scoring detail:** Not specified"}
-${island.sayDo ? `- **Say / Do gap:** ${island.sayDo.gap}/100` : "- **Say / Do gap:** Not specified"}`).join("\n\n")}
-
-## Risk Flags
-
-${riskFlags.map(risk => `### ${risk.territory}
-- **Risk:** ${risk.risk}
-- **Mitigation:** ${risk.mitigation}`).join("\n\n")}`;
-}
-
-function renderStage2MediaHabitat(islands) {
-  return `# Stage 2 Agent: Media Habitat and Community Activation
-
-## Role
-This output makes each island usable by mapping where it should live, who can carry it, and what formats fit the behaviour.
-
-${islands.filter(island => island.mediaHabitat || island.contentStrategy || island.community).map(island => `### ${island.name}
-${island.community ? `- **Community:** ${island.community.name || "Not specified"}${island.community.members ? ` — ${island.community.members}` : ""}` : "- **Community:** Not specified"}
-${island.mediaHabitat ? `- **Primary platform:** ${island.mediaHabitat.primaryPlatform}
-- **Format family:** ${island.mediaHabitat.formatFamily}
-- **Creator landscape:** ${island.mediaHabitat.creatorLandscape}
-- **Activation pattern:** ${island.mediaHabitat.activationPattern}` : "- **Media habitat:** Not specified"}
-${island.contentStrategy?.formats ? `- **Formats:** ${island.contentStrategy.formats.join(", ")}` : ""}
-${island.contentStrategy?.platforms ? `- **Platforms:** ${island.contentStrategy.platforms.join(", ")}` : ""}
-${island.contentStrategy?.pathToTrust ? `- **Path to trust:** ${island.contentStrategy.pathToTrust}` : ""}`).join("\n\n")}`;
-}
-
-function renderStage2CreativeBriefs(islands) {
-  return `# Stage 2 Agent: Creative Brief Extractor
-
-## Role
-This output turns the strongest Stage 2 islands into early creative briefing material.
-
-${islands.filter(island => island.creativeBrief).slice(0, 3).map(island => {
-    const brief = island.creativeBrief;
-    return `### ${island.name}
-- **The territory:** ${brief.theTerritory || "Not specified"}
-- **The human:** ${brief.theHuman || "Not specified"}
-- **The enemy:** ${brief.theEnemy || "Not specified"}
-- **The task:** ${brief.theTask || "Not specified"}
-- **The emotion:** ${brief.theEmotion || "Not specified"}
-- **The incongruence:** ${brief.theIncongruence || "Not specified"}
-- **Earned reason:** ${brief.earnedReason || "Not specified"}
-
-#### Emotional Arc
-- **Arrest:** ${brief.emotionalArc?.arrest || "Not specified"}
-- **Hold:** ${brief.emotionalArc?.middle || "Not specified"}
-- **Resolve:** ${brief.emotionalArc?.resolve || "Not specified"}
-
-#### Proof
-${renderList(brief.proof)}
-
-#### What Would Kill This
-${renderList(brief.landmines)}
-
-> ${brief.oneSentence || island.brandNarrative || ""}`;
-  }).join("\n\n")}`;
-}
-
-const stage2Intel = [
-  {
-    id: "stage2-agent-territory-map",
-    stage: "Stage 2",
-    agent: "Territory Map Compiler",
-    title: "Territory Map Compiler",
-    body: renderStage2TerritoryMap(enhancedIslands),
-  },
-  {
-    id: "stage2-agent-strategic-metrics",
-    stage: "Stage 2",
-    agent: "Strategic Metrics",
-    title: "Strategic Metrics",
-    body: renderStage2Metrics(enhancedIslands),
-  },
-  {
-    id: "stage2-agent-media-habitat",
-    stage: "Stage 2",
-    agent: "Media Habitat",
-    title: "Media Habitat and Community Activation",
-    body: renderStage2MediaHabitat(enhancedIslands),
-  },
-  {
-    id: "stage2-agent-creative-briefs",
-    stage: "Stage 2",
-    agent: "Creative Brief Extractor",
-    title: "Creative Brief Extractor",
-    body: renderStage2CreativeBriefs(enhancedIslands),
-  },
-];
-
 const fullIntel = [
   {
+    id: "primark-v2-stage2-cultural-territory-map",
+    stage: "Primark V2",
+    agent: "Stage 2 Synthesis",
+    title: "V2 Stage 2 Cultural Territory Map",
+    date: "2026-04-27",
+    summary: "Final Stage 2 synthesis from the orchestrator run. Includes the strategic narrative platform, ranked islands, creative directives, verification codes, and top-three creative briefs.",
+    body: v2Stage2Map,
+  },
+  {
+    id: "primark-v2-stage1-foundational-landscape",
+    stage: "Primark V2",
+    agent: "Stage 1 Synthesis",
+    title: "V2 Stage 1 Foundational Landscape",
+    date: "2026-04-27",
+    summary: "Synthesis of all ten Stage 1 agents, including contradictions and the Stage 2 fault-line handoff.",
+    body: v2Stage1Landscape,
+  },
+  {
+    id: "primark-v2-stage2-agent-1-communities",
+    stage: "Primark V2 - Stage 2",
+    agent: "Agent 2.1",
+    title: "Community Discovery",
+    body: v2Stage2Communities,
+  },
+  {
+    id: "primark-v2-stage2-agent-2-creators",
+    stage: "Primark V2 - Stage 2",
+    agent: "Agent 2.2",
+    title: "Creator Intelligence",
+    body: v2Stage2Creators,
+  },
+  {
+    id: "primark-v2-stage2-agent-3-texture",
+    stage: "Primark V2 - Stage 2",
+    agent: "Agent 2.3",
+    title: "Cultural Texture",
+    body: v2Stage2Texture,
+  },
+  {
+    id: "primark-v2-stage2-agent-4-adjacent-worlds",
+    stage: "Primark V2 - Stage 2",
+    agent: "Agent 2.4",
+    title: "Adjacent Worlds",
+    body: v2Stage2AdjacentWorlds,
+  },
+  {
+    id: "primark-v2-stage2-agent-5-character-audit",
+    stage: "Primark V2 - Stage 2",
+    agent: "Agent 2.5",
+    title: "Community Character Audit",
+    body: v2Stage2CharacterAudit,
+  },
+  {
+    id: "primark-v2-stage2-agent-6-metrics",
+    stage: "Primark V2 - Stage 2",
+    agent: "Agent 2.6",
+    title: "Strategic Metrics",
+    body: v2Stage2Metrics,
+  },
+  {
+    id: "primark-v2-stage1-agent-1-brand-archaeology",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 1",
+    title: "Brand Archaeology",
+    body: v2Stage1BrandArchaeology,
+  },
+  {
+    id: "primark-v2-stage1-agent-2-product-retail",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 2",
+    title: "Product & Retail Intelligence",
+    body: v2Stage1ProductRetail,
+  },
+  {
+    id: "primark-v2-stage1-agent-3-category-evolution",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 3",
+    title: "Category Evolution",
+    body: v2Stage1CategoryEvolution,
+  },
+  {
+    id: "primark-v2-stage1-agent-4-audience-intelligence",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 4",
+    title: "Audience Intelligence",
+    body: v2Stage1AudienceIntelligence,
+  },
+  {
+    id: "primark-v2-stage1-agent-5-competitive-landscape",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 5",
+    title: "Competitive Landscape",
+    body: v2Stage1CompetitiveLandscape,
+  },
+  {
+    id: "primark-v2-stage1-agent-6-cultural-currents",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 6",
+    title: "Cultural Currents",
+    body: v2Stage1CulturalCurrents,
+  },
+  {
+    id: "primark-v2-stage1-agent-7-deep-culture",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 7",
+    title: "Deep Culture",
+    body: v2Stage1DeepCulture,
+  },
+  {
+    id: "primark-v2-stage1-agent-8-signal-reading",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 8",
+    title: "Signal Reading",
+    body: v2Stage1SignalReading,
+  },
+  {
+    id: "primark-v2-stage1-agent-9-emotional-landscape",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 9",
+    title: "Emotional Landscape",
+    body: v2Stage1EmotionalLandscape,
+  },
+  {
+    id: "primark-v2-stage1-agent-10-platform-intelligence",
+    stage: "Primark V2 - Stage 1",
+    agent: "Agent 10",
+    title: "Platform Intelligence",
+    body: v2Stage1PlatformIntelligence,
+  },
+  {
     id: "os-run-synthesis",
-    stage: "Stage 1+2",
+    stage: "Legacy Run",
     agent: "OS Synthesis",
-    title: "OS Run Synthesis",
+    title: "Legacy OS Run Synthesis",
     date: "2026-04-26",
     body: osRun,
   },
-  ...stage2Intel,
   {
     id: "stage1-agent-1-brand-archaeology",
-    stage: "Stage 1",
+    stage: "Legacy Stage 1",
     agent: "Agent 1",
-    title: "Brand Archaeology",
+    title: "Legacy Brand Archaeology",
     body: brandArchaeology,
   },
   {
     id: "stage1-agent-3-category-evolution",
-    stage: "Stage 1",
+    stage: "Legacy Stage 1",
     agent: "Agent 3",
-    title: "Category Evolution",
+    title: "Legacy Category Evolution",
     body: categoryEvolution,
   },
   {
     id: "stage1-agent-4-audience-intelligence",
-    stage: "Stage 1",
+    stage: "Legacy Stage 1",
     agent: "Agent 4",
-    title: "Audience Intelligence",
+    title: "Legacy Audience Intelligence",
     body: audienceIntelligence,
   },
   {
     id: "stage1-agent-5-competitive-landscape",
-    stage: "Stage 1",
+    stage: "Legacy Stage 1",
     agent: "Agent 5",
-    title: "Competitive Landscape",
+    title: "Legacy Competitive Landscape",
     body: competitiveLandscape,
   },
   {
     id: "stage1-agent-6-cultural-currents",
-    stage: "Stage 1",
+    stage: "Legacy Stage 1",
     agent: "Agent 6",
-    title: "Cultural Currents",
+    title: "Legacy Cultural Currents",
     body: culturalCurrents,
   },
   {
     id: "stage1-agent-7-deep-culture",
-    stage: "Stage 1",
+    stage: "Legacy Stage 1",
     agent: "Agent 7",
-    title: "Deep Culture",
+    title: "Legacy Deep Culture",
     body: deepCulture,
   },
 ];
