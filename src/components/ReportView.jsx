@@ -327,6 +327,173 @@ function RiskFlagsSection({ risks }) {
   );
 }
 
+function WeatherMachineSection({ weatherMachine, islands }) {
+  if (!weatherMachine) return null;
+  const topBriefs = islands.filter(island => island.creativeBrief).slice(0, 3);
+
+  return (
+    <>
+      {weatherMachine.strategicNarrative && (
+        <section className="report-section weather-section">
+          <h2 className="report-section-title">Strategic Narrative Platform</h2>
+          <div className="weather-platform-card">
+            <div className="weather-platform-label">POV</div>
+            <p className="weather-platform-pov">{weatherMachine.strategicNarrative.pov}</p>
+            {weatherMachine.strategicNarrative.logic && (
+              <p className="weather-platform-logic">{weatherMachine.strategicNarrative.logic}</p>
+            )}
+          </div>
+        </section>
+      )}
+
+      <section className="report-section weather-section">
+        <h2 className="report-section-title">MAYA Curve</h2>
+        <p className="section-intro">
+          {weatherMachine.archipelagoMatrix?.description || 'Ranked by Most Advanced Yet Acceptable.'}
+        </p>
+        <div className="maya-table-wrapper">
+          <table className="summary-table maya-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Island</th>
+                <th>Emotion</th>
+                <th>Incongruence</th>
+                <th>Why It Passes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {islands.map(island => (
+                <tr key={island.id}>
+                  <td className="rank-cell">{island.rank}</td>
+                  <td className="name-cell">{island.name}</td>
+                  <td>{island.primaryEmotion}</td>
+                  <td>
+                    {island.maya?.incongruence != null && (
+                      <span className="table-score maya-score">{island.maya.incongruence}/10</span>
+                    )}
+                  </td>
+                  <td className="status-cell">{island.maya?.whyItPasses}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="report-section weather-section">
+        <h2 className="report-section-title">Creative Directives</h2>
+        <div className="directive-grid">
+          {islands.map(island => (
+            <article key={island.id} className="directive-card">
+              <div className="directive-rank">Island {island.rank}</div>
+              <h3>{island.name}</h3>
+              {island.humanTruth && (
+                <div className="directive-block">
+                  <span>Human Truth</span>
+                  <p>{island.humanTruth}</p>
+                </div>
+              )}
+              {island.culturalFriction && (
+                <div className="directive-block">
+                  <span>Cultural Friction</span>
+                  <p>{island.culturalFriction}</p>
+                </div>
+              )}
+              {island.ritual && (
+                <div className="directive-block">
+                  <span>Ritual</span>
+                  <p>{island.ritual}</p>
+                </div>
+              )}
+              {island.earnedRight && (
+                <div className="directive-block">
+                  <span>Earned Right</span>
+                  <p>{island.earnedRight}</p>
+                </div>
+              )}
+              {island.nativeTongue?.length > 0 && (
+                <div className="directive-tags">
+                  {island.nativeTongue.map(term => <span key={term}>{term}</span>)}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {weatherMachine.recommendations?.length > 0 && (
+        <section className="report-section weather-section">
+          <h2 className="report-section-title">Operating Recommendations</h2>
+          <div className="insights-list">
+            {weatherMachine.recommendations.map((item, i) => (
+              <div key={item} className="insight-item">
+                <span className="insight-num">{String(i + 1).padStart(2, '0')}</span>
+                <p className="insight-text">{item}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {topBriefs.length > 0 && (
+        <section className="report-section weather-section">
+          <h2 className="report-section-title">Top 3 Creative Briefs</h2>
+          <div className="creative-brief-report-list">
+            {topBriefs.map((island, i) => (
+              <article key={island.id} className="creative-brief-report-card">
+                <div className="brief-report-kicker">Brief {i + 1}</div>
+                <h3>{island.name}</h3>
+                <div className="brief-report-block">
+                  <span>The Human</span>
+                  <p>{island.creativeBrief.theHuman}</p>
+                </div>
+                <div className="brief-report-block">
+                  <span>The Enemy</span>
+                  <p>{island.creativeBrief.theEnemy}</p>
+                </div>
+                <div className="brief-report-block task">
+                  <span>The Task</span>
+                  <p>{island.creativeBrief.theTask}</p>
+                </div>
+                <blockquote className="brief-provocation">"{island.creativeBrief.oneSentence}"</blockquote>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {weatherMachine.contradictions?.length > 0 && (
+        <section className="report-section weather-section">
+          <h2 className="report-section-title">Agent Contradictions</h2>
+          <div className="risk-grid">
+            {weatherMachine.contradictions.map((item, i) => (
+              <div key={item} className="risk-card contradiction-card">
+                <div className="risk-territory">Contradiction {i + 1}</div>
+                <p className="risk-copy">{item}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {weatherMachine.verificationCodes?.length > 0 && (
+        <section className="report-section weather-section">
+          <h2 className="report-section-title">Verification Codes</h2>
+          <div className="verification-grid">
+            {weatherMachine.verificationCodes.map(item => (
+              <div key={`${item.source}-${item.code}`} className="verification-chip">
+                <span>{item.source}</span>
+                <strong>{item.code}</strong>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
+  );
+}
+
 function CompleteReportFieldsSection({ brandData }) {
   const reportEntries = Object.entries(brandData)
     .filter(([key, value]) => key !== 'islands' && !['fullIntel', 'agentOutputs', 'stageOutputs'].includes(key) && !isEmptyValue(value));
@@ -376,7 +543,7 @@ function CompleteReportFieldsSection({ brandData }) {
 }
 
 export default function ReportView({ brandData }) {
-  const { meta, islands, insights = [], sources, strategicBrief, riskFlags, risks } = brandData;
+  const { meta, islands, insights = [], sources, strategicBrief, riskFlags, risks, weatherMachine } = brandData;
   const tier1 = islands.filter(i => i.tier === 1);
   const tier2 = islands.filter(i => i.tier === 2);
 
@@ -517,8 +684,9 @@ export default function ReportView({ brandData }) {
       </section>
 
       <StrategicBrief brief={strategicBrief} />
+      <WeatherMachineSection weatherMachine={weatherMachine} islands={islands} />
       <MediaHabitatSection islands={islands} />
-      <CreativeBriefsSection islands={tier1} />
+      {!weatherMachine && <CreativeBriefsSection islands={tier1} />}
       <RiskFlagsSection risks={riskFlags || risks} />
       <CompleteReportFieldsSection brandData={brandData} />
 

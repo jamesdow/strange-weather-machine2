@@ -229,6 +229,53 @@ export default function IslandCard({ island, allSources }) {
             </div>
           )}
 
+          {island.maya && (
+            <div className="card-section">
+              <div className="card-section-title">MAYA Fit</div>
+              <div className="weather-mini-score">
+                <span>Incongruence</span>
+                <strong>{island.maya.incongruence}/10</strong>
+              </div>
+              {island.maya.whyItPasses && <p className="momentum-text">{island.maya.whyItPasses}</p>}
+            </div>
+          )}
+
+          {(island.humanTruth || island.culturalFriction || island.ritual || island.earnedRight) && (
+            <div className="card-section">
+              <div className="card-section-title">Creative Directive</div>
+              {island.humanTruth && (
+                <div className="brief-block">
+                  <div className="brief-label">Human Truth</div>
+                  <p className="brief-text">{island.humanTruth}</p>
+                </div>
+              )}
+              {island.culturalFriction && (
+                <div className="brief-block">
+                  <div className="brief-label">Cultural Friction</div>
+                  <p className="brief-text">{island.culturalFriction}</p>
+                </div>
+              )}
+              {island.ritual && (
+                <div className="brief-block">
+                  <div className="brief-label">Ritual</div>
+                  <p className="brief-text">{island.ritual}</p>
+                </div>
+              )}
+              {island.earnedRight && (
+                <div className="brief-block">
+                  <div className="brief-label">Earned Right</div>
+                  <p className="brief-text">{island.earnedRight}</p>
+                </div>
+              )}
+              {island.nativeTongue?.length > 0 && (
+                <div className="card-tags-row">
+                  <span className="tags-label">Native tongue:</span>
+                  {island.nativeTongue.map(term => <span key={term} className="meta-tag">{term}</span>)}
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Cultural Momentum */}
           {island.culturalMomentum && (
             <div className="card-section">
